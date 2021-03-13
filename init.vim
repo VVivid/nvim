@@ -4,7 +4,8 @@ set noswapfile
 set hlsearch
 set ignorecase
 set incsearch
-
+set shell=/bin/zsh
+let $SHELL = "/bin/zsh"
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -26,10 +27,8 @@ Plug 'elzr/vim-json'
 " Plug 'mattn/emmet-vim'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'alvan/vim-closetag'
-
-
-
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 colorscheme gruvbox
@@ -59,8 +58,7 @@ let mapleader = "'"
 
 " NerdTreeToggle
 nnoremap <silent> <leader>nf :NERDTreeToggle<CR>
-nnoremap <silent> <leader>ff :FZF<CR>
-
+nnoremap <silent> <leader>ff :GFiles<CR>
 call neomake#configure#automake('nrwi', 502)
 let g:neomake_python_pylint_maker = {
   \ 'args': [
@@ -78,7 +76,6 @@ let g:neomake_python_pylint_maker = {
   \ }
 
 let g:neomake_python_enabled_makers = ['flake9', 'pylint']
-
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -86,6 +83,4 @@ nnoremap <C-H> <C-W><C-H>
 
 nnoremap <silent> = :vertical resize +5<CR>
 nnoremap <silent> - :vertical resize -5<CR>
-
-" Use K to show documentation in preview window 
 
