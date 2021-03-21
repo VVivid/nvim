@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 " Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'wadackel/vim-dogrun'
 Plug 'elzr/vim-json'
 " Plug 'othree/html5.vim'
 " Plug 'mattn/emmet-vim'
@@ -31,7 +32,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dogrun
 let g:gruvbox_contrast_dark = 'hard'
 source $HOME/.config/nvim/coc.vim
 
