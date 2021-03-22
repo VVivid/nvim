@@ -30,6 +30,7 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'franbach/miramare'
 call plug#end()
 
 colorscheme dogrun
