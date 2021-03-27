@@ -30,6 +30,8 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 call plug#end()
 
 colorscheme dogrun
@@ -63,7 +65,7 @@ nnoremap <silent> <leader>ff :GFiles<CR>
 call neomake#configure#automake('nrwi', 502)
 let g:neomake_python_pylint_maker = {
   \ 'args': [
-  \ '-d', 'C0103, C0111',
+  \ '-d', 'C0103, C0111, E0402,',
   \ '-f', 'text',
   \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
   \ '-r', 'n'
