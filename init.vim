@@ -34,7 +34,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
-colorscheme dogrun
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 source $HOME/.config/nvim/coc.vim
 
